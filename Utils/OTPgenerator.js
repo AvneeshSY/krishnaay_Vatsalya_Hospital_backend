@@ -9,14 +9,12 @@ function generateOtp() {
 }
 
 const transporter = nodeMailer.createTransport({
-  host: "smtpout.secureserver.net",
-  secure: true,
-  port: 465,
-  secure: true,
+  service: "gmail",
   auth: {
-    user: "support@rapidtaxo.com",
-    pass: "InoxRapidTaxo2025@Deepak",
+    user: "avneesh7inox@gmail.com",
+    pass: "rhkb mccq blrg bsel", 
   },
+
   tls: {
     rejectUnauthorized: false,
   },
@@ -27,7 +25,7 @@ const transporter = nodeMailer.createTransport({
 
 const sendOtpEmail = (email, otp) => {
   const mailOptions = {
-    from: `'Rapid Taxo' ${"support@rapidtaxo.com"}`,
+    from: `'Krishnaay Vatsalya' ${"avneesh7inox@gmail.com"}`,
     to: email,
     subject: "Your One-Time Password (OTP) for Password Setup",
     text: `Your OTP is: ${otp}`,

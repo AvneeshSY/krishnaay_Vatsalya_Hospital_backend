@@ -17,7 +17,7 @@ app.use(express.json());
 
 
 
-app.use('/api/', SignupRoutes);
+app.use('/api', SignupRoutes);
 
 
 // app.get('/', (req, res) => {
