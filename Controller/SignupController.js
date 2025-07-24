@@ -6,7 +6,7 @@ const bcrypt= require("bcryptjs")
 const registerUser=async(req,res)=>{
 
     try{
-        const {first_name,last_name,email,password,role,profile_complete,specialization}=req.body;
+        const {first_name,last_name,email,password,role,profile_complete,specialization,profile_img}=req.body;
         console.log("error Avneesh")
         const existingUser=await SignupModal.findOne({email:email});
         if(existingUser){
@@ -22,6 +22,7 @@ const registerUser=async(req,res)=>{
         last_name,
         email,
         specialization:specialization || null,
+        profile_img:profile_img || null,
         password: hashedPassword,
         role,
        

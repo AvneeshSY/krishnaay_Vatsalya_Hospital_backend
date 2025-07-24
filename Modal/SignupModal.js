@@ -32,6 +32,14 @@ const signupSchema = new mongoose.Schema({
     ref: 'Specialization',
     default: null
   },
+  profile_img:{
+    type: String,
+    default: null ,
+    required:false,
+
+
+  },
+  
   password: {
     type: String,
     required: true,
