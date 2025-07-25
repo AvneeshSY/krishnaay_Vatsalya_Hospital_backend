@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const Specialization =require("./Specialization.js")
+const Specialization = require("./Specialization.js")
 
 
 const signupSchema = new mongoose.Schema({
@@ -17,29 +17,29 @@ const signupSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true, // Prevent duplicate emails
-    
+
     match: [
       /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
       'Please provide a valid email address',
     ],
   },
-        profile_image: {
-        type: String, // This will store the image URL or file path
-        default: null
-      },
+  profile_image: {
+    type: String, // This will store the image URL or file path
+    default: null
+  },
   specialization: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Specialization',
     default: null
   },
-  profile_img:{
+  profile_img: {
     type: String,
-    default: null ,
-    required:false,
+    default: null,
+    required: false,
 
 
   },
-  
+
   password: {
     type: String,
     required: true,
